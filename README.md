@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>UG GNURS 303: Eye, Ear, Throat & Dental Nursing | 111 MCQs</title>
+    <title>UG GNURS 303: Eye, Ear, Throat & Dental Nursing | 129 MCQs</title>
     <style>
         * {
             margin: 0;
@@ -226,13 +226,13 @@
 <div class="exam-wrapper" id="examApp">
     <div class="ug-banner">
         <h1>GNURS 303 · FINAL ASSESSMENT</h1>
-        <p>UNIVERSITY OF GHANA | EYE, EAR, NOSE, THROAT & DENTAL NURSING | 111 MCQs | TIME: 50 MINUTES</p>
+        <p>UNIVERSITY OF GHANA | EYE, EAR, NOSE, THROAT & DENTAL NURSING | 129 MCQs | TIME: 50 MINUTES</p>
     </div>
     <div class="timer-panel">
         <div class="timer-info">
             <span>⏱️ REMAINING</span>
             <span class="timer" id="timerDisplay">50:00</span>
-            <span class="q-counter" id="counterSpan">Q1 / 120</span>
+            <span class="q-counter" id="counterSpan">Q1 / 129</span>
         </div>
         <div class="timer-bar-container">
             <div class="timer-bar" id="timerBar"></div>
@@ -247,9 +247,8 @@
 </div>
 
 <script>
-    // ---------- 111 MCQs with BALANCED option lengths (no obvious longest-correct) ----------
-    // Each question's options are similar in length; correct answer is not predictable by length.
-    // Options will be shuffled at runtime to further remove positional bias.
+    // ---------- 129 MCQs with BALANCED option lengths (no obvious longest-correct) ----------
+    // Base 120 + 9 new = 129 total.
     const BASE_QUESTIONS = [
         { text: "Which best describes early gingivitis?", options: ["Painless bleeding with gentle probing", "Deep pockets greater than five mm", "Spontaneous exudate and mobility", "Recession with exposed cementum"], correct: 0 },
         { text: "Primary bacteria in supragingival plaque?", options: ["Porphyromonas gingivalis species", "Streptococcus mutans & Actinomyces", "Treponema denticola complex", "Candida albicans yeast form"], correct: 1 },
@@ -361,11 +360,21 @@
         { text: "Most common sensorineural hearing loss in elderly:", options: ["Presbycusis", "Meniere's disease", "Otosclerosis", "Acoustic neuroma"], correct: 0 },
         { text: "First step in suspected open globe injury?", options: ["Rigid shield, avoid pressure, immediate ophthalmology", "Irrigate with betadine", "Perform tonometry", "Apply topical anesthetic & remove FB"], correct: 0 },
         { text: "Safe antibiotic for acute bacterial rhinosinusitis covering typical pathogens?", options: ["Amoxicillin-clavulanate", "Vancomycin", "Ciprofloxacin alone", "Metronidazole"], correct: 0 },
-        { text: "Adult with recurrent unilateral serous otitis media requires:", options: ["Nasopharyngeal endoscopy to rule out malignancy", "Immediate myringotomy", "Antibiotics for 3 months", "Decongestants only"], correct: 0 }
+        { text: "Adult with recurrent unilateral serous otitis media requires:", options: ["Nasopharyngeal endoscopy to rule out malignancy", "Immediate myringotomy", "Antibiotics for 3 months", "Decongestants only"], correct: 0 },
+        // -------------------- 9 NEW ADDITIONAL QUESTIONS (total 129) --------------------
+        { text: "Which condition is characterized by inflammation of the operculum overlying a partially erupted mandibular third molar?", options: ["Pericoronitis", "Alveolar osteitis", "Pulpitis", "Apical periodontitis"], correct: 0 },
+        { text: "The most common salivary gland tumor is:", options: ["Pleomorphic adenoma (benign mixed tumor)", "Mucoepidermoid carcinoma", "Adenoid cystic carcinoma", "Warthin tumor"], correct: 0 },
+        { text: "Oral candidiasis (thrush) appears as:", options: ["White, curd-like plaques on erythematous mucosa", "Painless ulcers with rolled borders", "Vesicles that rupture to form crusts", "Brown pigmented macules"], correct: 0 },
+        { text: "Trigeminal neuralgia (tic douloureux) is characterized by:", options: ["Unilateral, paroxysmal, electric shock-like pain in CN V distribution", "Constant burning pain with sensory loss", "Bilateral facial weakness", "Pain triggered by jaw clenching only"], correct: 0 },
+        { text: "Antrochoanal polyp typically originates from:", options: ["Maxillary sinus and extends into choana", "Ethmoid sinuses bilaterally", "Sphenoid sinus", "Frontal sinus"], correct: 0 },
+        { text: "Glomus tympanicum tumor classically presents with:", options: ["Pulsatile tinnitus and red mass behind tympanic membrane", "Conductive hearing loss with normal otoscopy", "Sudden sensorineural loss", "Facial nerve palsy"], correct: 0 },
+        { text: "Bell's palsy is an acute peripheral facial paralysis that is:", options: ["Idiopathic, often associated with viral reactivation (HSV-1)", "Caused by stroke involving the motor cortex", "Always bilateral", "Associated with hearing loss"], correct: 0 },
+        { text: "Rhinolith (nasal stone) is most commonly associated with:", options: ["Long-standing foreign body with calcification", "Allergic rhinitis", "Fungal sinusitis", "Nasal polyposis"], correct: 0 },
+        { text: "Eagle syndrome results from an elongated styloid process causing:", options: ["Oropharyngeal pain, dysphagia, and referred otalgia", "Hoarseness and vocal cord paralysis", "Neck mass and thyroglossal cyst", "Horner syndrome"], correct: 0 }
     ];
 
-    // Ensure exactly 120 questions
-    const FINAL_QS = BASE_QUESTIONS.slice(0,120);
+    // Ensure exactly 129 questions
+    const FINAL_QS = BASE_QUESTIONS.slice(0,129);
     
     // Shuffle options for each question to avoid positional bias (keep correct answer index updated)
     function shuffleOptions(question) {
@@ -526,7 +535,7 @@
     
     renderCurrent();
     startTimer();
-    updateTimerUI(); // initial bar width
+    updateTimerUI();
 </script>
 </body>
 </html>
